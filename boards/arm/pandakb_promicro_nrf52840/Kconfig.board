@@ -1,0 +1,5 @@
+config BOARD_PANDAKB_PROMICRO_NRF52840
+    bool "PandaKB ProMicro nRF52840"
+    depends on SOC_NRF52840_QFAA
+    help
+      PandaKB ProMicro nRF52840 board
