@@ -1,0 +1,1 @@
+board_set_flasher_ifnset(nrfutil)
