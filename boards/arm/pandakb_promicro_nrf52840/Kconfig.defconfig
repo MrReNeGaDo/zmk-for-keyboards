@@ -1,0 +1,15 @@
+if BOARD_PANDAKB_PROMICRO_NRF52840
+
+config BT
+    default y
+
+config SERIAL
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+config BT_CTLR
+    default y
+
+endif
