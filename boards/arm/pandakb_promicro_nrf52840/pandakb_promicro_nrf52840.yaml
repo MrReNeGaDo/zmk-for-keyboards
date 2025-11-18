@@ -1,0 +1,15 @@
+identifier: pandakb_promicro_nrf52840
+name: PandaKB ProMicro nRF52840
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - gpio
+  - i2c
+  - serial
+  - usb
+  - ble
+ram: 256
+flash: 1024
