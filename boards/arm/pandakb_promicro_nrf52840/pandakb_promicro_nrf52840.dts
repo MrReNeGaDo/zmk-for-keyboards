@@ -1,0 +1,36 @@
+/dts-v1/;
+
+/ {
+    model = "PandaKB ProMicro nRF52840";
+    compatible = "pandakb,promicro-nrf52840";
+};
+
+#include <nordic/nrf52840_qfaa.dtsi>
+
+/ {
+    chosen {
+        zephyr,console = &uart0;
+        zephyr,usb = &usbd;
+    };
+};
+
+&usbd {
+    status = "okay";
+};
+
+&pro_micro_i2c {
+    status = "okay";
+};
+
+&i2c0 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+};
+
+&pinctrl {
+    pro_micro_i2c: pro_micro_i2c {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 27) NRF_PSEL(TWIM_SDA, 0, 26)>;
+        };
+    };
+};
